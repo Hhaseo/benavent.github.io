@@ -1,0 +1,86 @@
+---
+layout: default
+title: Pac Man
+---
+
+<!-- Banner -->
+	<section id="banner">
+		<div class="content">
+			<header>
+				<h2> Pac Man </h2>
+				<h3> Projet de démonstration pour les Processus de Décisions Markoviens </h3>
+			</header>
+				</div>
+	</section>
+
+<!-- Section -->
+	<section>
+			<article>
+				<div class="content">
+					<h3> Contexte</h3>
+					<h4> Septembre 2013 - 2014</h4>
+					<p>Sous-projet du stage réalisé dans l'équipe Modèles, Agents et Décisions (MAD) au GREYC lors de ma cinquième année à Epitech. Plus de détails sur le stage <a href="ExpProGreyc.html">ici</a>.</p>
+					</div>
+			</article>
+			<article>
+				<div class="content">
+					<h3>Objectif</h3>
+					<p> Le sujet du stage portait sur la réalisation d'une librairie Java d'intelligence artificielle. Parmi les techniques implémentées, nous retrouvons de nombreux algorithmes de planification 
+					appartenant à la famille des Processus de Décisions Markoviens. Ces algorithmes faisant office de cours au sein de l'Université de Caen Normandie, il nous a semblé approprié de créer un petit jeu nous
+					permettant à la fois de faire nos tests et de servir d'outil de démonstration lors des différents évènements (salon de l'étudiant, fête de la science) pour montrer et expliquer à la fois les 
+					réalisations de l'équipe MAD et les cours proposés à l'Université.</p>
+					<p> Cet outil n'ayant pas été initialement prévu dans le cadre du stage, sa forme était libre. Après discussion avec mon encadrant, nous sommes tombés d'accord qu'un jeu jouable par les utilisateurs,
+					ou non, serait plus parlant lors des salons et avons donc opté pour un jeu bien connu, le Pac-Man.</p>
+				</div>
+			</article>
+			<article>
+				<div class="content">
+					<h3>Technologie</h3>
+					<p> Tout comme la librairie d'intelligence artificielle, cette simulation est codée en Java. Pour ce qui est de l'interface, une librairie interne à l'équipe, développée par un précédent stagiaire, 
+					est utilisée. Cette librairie est une surcouche de swing modifié au fur et à mesure des projets.</p>
+				</div>
+			</article>
+			<article>
+				<div class="content">
+					<h3>Réalisation</h3>		
+				
+						<section id="banner">
+							<div class="content">
+								<header>
+									<p>Configuration de la partie</p>
+								</header>
+								<p> Les quatre fantômes tout comme les Pac-Man peuvent être gérés par des I.A. fournies par la librairie sur laquelle on travaillait ou par des joueurs, selon les besoins.
+								On a ajouté l'option de pouvoir utiliser un 2nd PacMan (avec des touches différentes du clavier, ou une autre I.A.).</p>
+					<p>Les I.A. pouvant être utilisées sont de trois types :
+					<ul>
+					<li> I.A. du jeu original : Aléatoire et Chaser (l'I.A. poursuit le joueur quand elle le voit) </li>
+					<li> Processus de Décisions Markoviens : Value Iteration et Policy Iteration </li>
+					<li> Apprentissage par renforcement : QLearning, Sarsa, Rmax et des variantes </li>
+					</ul>
+					Pour permettre une planification plus rapide et surtout donner plus de chances aux joueurs, les I.A. proposent divers adapteurs réduisant leur visibilité (sans adaptateur, l'I.A. prend certe plus de temps
+					à calculer son itinéraire, mais poursuivra le joueur en prenant toujours le chemin optimal et en tenant compte de ses alliés, rendant le jeu impossible).
+					</p>
+							</div>
+							
+							<span class="image object">
+								<img src="images/PacManConfiguration.png" alt="" style="width:100%;height:100%;" />
+							</span>
+						</section>
+						<section id="banner">
+							<div class="content">
+								<header>
+									<p>Affichage de la partie</p>
+								</header>
+								<p> L'implémentation de l'interface est assez basique. La carte étant représentée par une simple grille, comme dans le jeu original elle reste inchangée tout au long de la partie.
+								La carte est composée de petits points à manger et de 4 gros points permettant au Pac-Man de dévorer les fantômes.
+								Lorsque tous les points sont mangés, la carte se réinitialise et le joueur peut continuer ainsi jusqu'à l'épuisement de ses vies. </p>
+					<p>			Un compteur de point et de vie est indiqué sur le côté de l'interface (non visible sur la capture d'écran disponible), le score final apparaissant quand le joueur a perdu toutes ses vies.
+					</p>
+							</div>
+							<span class="image object">
+								<img src="images/PacMan.png" alt="" style="width:100%;height:100%;" />
+							</span>
+						</section>	
+				</div>
+			</article>
+	</section>

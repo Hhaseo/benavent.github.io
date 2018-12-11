@@ -1,0 +1,137 @@
+---
+layout: default
+title: Manipulation Game
+---
+
+<!-- Banner -->
+	<section id="banner">
+		<div class="content">
+			<header>
+				<h2> Implémentation d'un jeu de manipulation pour les systèmes de réputation </h2>
+				<h3> Projet annuel de Master 2 DECIM </h3>
+			</header>
+				</div>
+	</section>
+
+<!-- Section -->
+	<section>
+			<article>
+				<div class="content">
+					<h3> Contexte</h3>
+					<h4> Septembre 2014 - février 2015</h4>
+					<p>Projet annuel obligatoire pour la seconde année du Master DECIM.</p>
+					<p>Encadré par le Maître de Conférence Grégory Bonnet, membre de l'équipe Modèles, Agents et Décisions (MAD) du GREYC à l'Université de Caen Normandie.</p>
+					</div>
+			</article>
+			<article>
+				<div class="content">
+					<h3>Sujet</h3>
+					<p> Les systèmes de réputation servent, en général, à évaluer la fiabilité d'agents au sein d'une communauté. Ces systèmes sont très répandus sur les sites de commerces (Ebay...), 
+					les systèmes de partage de fichier en Pair à Pair ou bien encore les échanges de services (covoiturage...). Ces systèmes permettent ainsi d'identifier les agents non fiables,
+					tentant de manipuler le système à leur avantage.
+				</p>
+				<p> Bien évidemment les agents malveillants tentent de s'adapter, il existe diverses techniques répandues pour manipuler un système de récompense. On retrouve principalement trois grandes catégories :
+				<ul>
+				<li> La promotion : un agent sur-évalue consciemment la qualité d'un autre agent. </li>
+				<li> La diffamation : un agent sous-évalue volontairement la qualité d'un autre agent. </li>
+				<li> L'attaque sybile : ajout massif de faux agents (des faux comptes) utilisant la promotion ou la diffamation pour fausser le système. </li>
+				</ul>
+				</p>
+				<p> L'objectif de ce projet est double. Tout d'abord, intégrer à une librairie Java interne à l'équipe MAD (créé lors d'un <a href="ExpProGreyc.html">stage précédent</a>) différents systèmes 
+				de réputation et tous les outils nécessaires à leur bon fonctionnement
+				et d'autre part, on souhaite créer une interface basique permettant de visualiser et de configurer les relations entre agents pour observer les systèmes de réputations en action.
+				</p>
+				</div>
+			</article>
+			<article>
+				<div class="content">
+					<h3>Réalisation</h3>
+					<p> La première partie du projet fut donc l'analyse des algorithmes aux travers d'articles scientifiques, puis l'implémentation des systèmes de réputation EigenTrust et Beta Reputation. 
+					Par la suite, j'ai pu implémenter deux autres systèmes d'actualité, FlowTrust et TrustWalker.
+					</p>
+					<p>La seconde partie du projet fut la réalisation de l'interface de simulation, divisée en quatre parties distinctes :
+					<ul>
+					<li>
+						<section id="banner">
+							<div class="content">
+								<header>
+									<p>Configuration initiale</p>
+								</header>
+								<p> La première fenêtre au lancement sert uniquement à sélectionner le scénario (lui-même extrait d'un fichier texte). On y choisit simplement le système de réputation voulu 
+								en y configurant les variables associées.</p>
+							</div>
+							<span class="image object">
+								<img src="images/ProjAnM2DECIM/InitialWindow.png" alt="" style="width:50%;height:100%;" />
+							</span>
+						</section>
+					</li>
+					<li>
+						<section id="banner">
+							<div class="content">
+								<header>
+									<p>Représentation du réseau</p>
+								</header>
+								<p> Chaque agent est distingué par un point de couleur différent en fonction de leur type (géré par l'utilisateur, géré par un comportement prédéfini potentiellement mal-veillant).
+								Le placement du graphe est totalement automatisé et peut-être relancé de manière à réorganiser le graphique d'une manière satisfaisante. 
+								Au travers d'une sous-fenêtre, on peut également ajouter ou supprimer des agents du système à la volée.</p>
+							</div>
+							<span class="image object">
+								<img src="images/ProjAnM2DECIM/graphView.png" alt="" style="width:100%;height:100%;" />
+							</span>
+						</section>
+					</li>
+					<li>
+						<section id="banner">
+							<div class="content">
+								<header>
+									<p>Modification des relations entre agents</p>
+								</header>
+								<p> Un autre onglet du simulateur permet d'afficher les relations entre agent (les valeurs de confiance entre les deux agents, leurs comportements entre eux et la valeur globale de 
+								confiance associée par le système de réputation). A part cette dernière valeur (qui est calculé automatiquement), 
+								chacune de ces valeurs peut être modifiée manuellement pour influencer la simulation.</p>
+							</div>
+							<span class="image object">
+								<img src="images/ProjAnM2DECIM/confianceEntreAgent.png" alt="" style="width:100%;height:100%;" />
+							</span>
+						</section>
+					</li>
+					
+					<li>
+						<section id="banner">
+							<div class="content">
+								<header>
+									<p>Résultats de la simulation</p>
+								</header>
+								<p>Enfin le dernier onglet est un simple affichage des données du système de réputation, calculant la valeur de chaque agent d'un point de vue global et, lorsque le système le permet,
+								du point de vue d'un agent donné.</p>
+							</div>
+							<span class="image object">
+								<img src="images/ProjAnM2DECIM/reputationSystem.png" alt="" style="width:100%;height:100%;" />
+							</span>
+						</section>
+					</li>
+					</ul>
+					</p>
+					
+				</div>
+			</article>
+			
+			<article>
+				<div class="content">
+					<h3>Bilan</h3>
+					<p>  Le projet a répondu à toutes les attentes initiales du projet et plus encore (les 2 derniers systèmes de réputation ayant été implémentés en bonus vis-à-vis du sujet initial).	</p>
+					<p>  <b>Vous pouvez télécharger mon rapport de projet (en français) </b> :<a href="Docs/RapProjAnM2DECIM.pdf" download="Rapport Projet Annuel M2 DECIM Florian Benavent.pdf">ici</a>	</p>
+				</div>
+			</article>
+			
+			<article>
+				<div class="content">
+					<h3>Sites en lien avec ce projet :</h3>
+					<a href="https://uniform.unicaen.fr/catalogue/formation/Master/5717-Master-informatique-parcours-decision-et-optimisation?s=&r=">Master DECIM</a><br>
+					<a href="http://ilpubs.stanford.edu:8090/562/1/2002-56.pdf">Eigen Trust</a><br>
+					<a href="https://domino.fov.uni-mb.si/proceedings.nsf/proceedings/d9e48b66f32a7dffc1256e9f00355b37/$file/josang.pdf">Beta Reputation</a><br>
+					<a href="https://cis.temple.edu/~jiewu/research/publications/Publication_files/FlowTrust-Trust%20Inference%20with%20Network%20Flows.pdf">FlowTrust</a><br>
+					<a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.332.1499&rep=rep1&type=pdf">TrustWalker</a><br>
+					</div>
+			</article>
+	</section>

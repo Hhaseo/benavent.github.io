@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Doctorat Greyc </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<!-- Banner -->
+	<section id="banner">
+		<div class="content">
+			<header>
+				<h1> Doctorat au GREYC</h1>
+				<h2> Intégration de recommandations dans des systèmes numériques intelligents</h2>
+			</header>
+		</div>
+	</section>
+
+<!-- Section -->
+	<section>
+			<article>
+				<div class="content">
+					
+					<p><h3>Date :</h3> octobre de 2015 à 2018</p>
+				</div>
+			</article>
+			<article>
+				<div class="content">
+					<h3>Sujet</h3>
+					<p>L'objectif du sujet était d'étudier l'intégration de recommandations simples et accessibles à tous les utilisateurs, peu importe leur niveau de connaissance sur le modèle, dans un modèle de planification MDP (Processus de Décisions Markoviens).
+					Pour faire sens à l'utilité d'exprimer des recommandations, il fallait nous placer soit dans un cadre non-observable (les POMDPs) soit dans un cadre incertain. Beaucoup de travaux ayant déjà été réalisés sur cette thématique dans le cadre des POMDPs, nous nous sommes orientés sur les MDPs Incertains.</p>
+				</div>
+			</article>
+			<article>
+				<div class="content">
+					<h3>Entreprise, Encadrement</h3>
+					<p>Le Greyc est un laboratoire de recherche affilié à l'Université de Caen Normandie et du CNRS dédié aux recherches dans le domaine de l'informatique. Il est composé de diverses équipes, 
+					chacune spécialisée dans un domaine différent (Images, Biométrie, data mining ...).
+					J'ai réalisé ce Doctorat au sein de l'équipe Modèles, Agents, Decision (MAD) spécialisée dans le raisonnement et la représentation des connaissances, la planification sous incertitudes et le multi-agent. 
+					</p>
+					<p>
+					Durant ces trois ans, j'ai été encadré par le Professeur Bruno Zanuttini, responsable de l'équipe MAD. Les locaux de l'équipe se situent sur le Campus 2 de l'Université de Caen Normandie.
+					</p>
+				</div>
+			</article>
+			<article>
+				<div class="content">
+					<h3>Déroulement</h3>
+					<p>
+					Si les Processus de Décisions Markoviens sont déjà utilisés dans divers secteurs d'activités, les principales branches utilisées sont les MDPs observables ou partiellement observables, multi-agents ou non.
+					Il existe une autre branche, les MDPs Incertains qui, bien que prometteurs, ne sont pas très utilisés. L'avantage de ces derniers est de ne pas requérir l'expression totale du modèle (la représentation du monde) 
+					de manière précise. De cette manière, on peut exprimer des préférences ou des incertitudes de manière aisée.
+					</p>
+					<p>
+					On peut y distinguer deux sous-groupes : 
+					<ul>
+					<li>D'un côté, les MDP avec les transitions (la dynamique du monde) incertaines. Ces modèles permettent alors d'exprimer diverses incertitudes sur le monde sans pour autant agrandir 
+					le modèle en lui-même. En effet, pour représenter de telles incertitudes dans un modèle MDP standard, il faut augmenter le nombre d'états possible pour le monde et fortement alourdir la matrice de transitions 
+					représentant les connexions entre ces états.</li>
+					<li>Le 2nd groupe est celui des récompenses incertaines. Les récompenses sont généralement utilisées pour représenter toute une hiérarchie de but mais également des états évitables. Dans le cadre d'un MDP, cette 
+					représentation est fixe, mais l'ajout d'incertitudes permet d'introduire par exemple, sans rajouter une couche au modèle, diverses préférences d'un utilisateur.</li>
+					</ul>
+					</p>
+					
+					<p>
+					Mon objectif est alors d'introduire des recommandations d'un utilisateur (des exemples, des conseils...) sous une forme compréhensible aussi bien par un humain sans connaissance des MDP 
+					que par l'agent qui devra les intégrer pour réduire l'incertitude lors de l'exécution.
+					</p>
+					<p>
+					Dans un premier temps, je me suis intéressé à la première famille, avec les transitions incertaines. Cependant, avec le temps nous avons compris que la complexité de ces dernières empêchaient une bonne intégration de recommandations.
+					Sur le reste du Doctorat, je me suis donc concentré sur la seconde famille, celle avec les récompenses incertaines. Cette famille est déjà plus étudiée d'un point de vue littéraire au travers des Imprecise Reward Markov Decision Process (IRMDP). 
+					L'intégration de recommandations dans ce cadre a été possible, certains avaient même déjà proposé des approches différentes de celle qu'on envisageait, nous servant d'élément de comparaison pour nos approches.
+					Ces recommandations dans les IRMDPs ont fait l'office de deux publications (présentées plus bas).</p>
+					
+					<p>
+					Sur la fin de la deuxième année et la troisième année, j'ai pu développer deux nouvelles idées fonctionnelles, mais qui n'ont pu faire l'objet de publication, par manque de temps :
+					<ul>
+					<li>Nouvelle méthode de résolution approximative d'un IRMDP : Il existait déjà des approches offrant un gain de temps certain, mais ne garantissant pas une marge d'erreur vis-à-vis de la solution optimale. Nous avons donc développé une approche approximative offrant un gain de temps très intéressant, mais incluant en plus une marge d'erreur garantie.</li>
+					<li>Extension des IRMDPs pour des cas multi-agents :  ce domaine n'était pas du tout présent dans la littérature, nous avons donc proposé 3 évolutions aux IRMDPs, chacun exprimant un compromis différent entre les modèles Incertains de tous les utilisateurs. </li>
+					</ul>
+					</p>
+					<p>
+					D'un point de vue réalisation technique, j'ai pu implémenter les différents algorithmes de résolution pour les IRMDPs existants, ainsi que l'intégralité des algorithmes proposés pour nos contributions de manière à réaliser des simulations pour avoir un début de résultat expérimental appuyant nos recherches.
+					Ces implémentations ont été réalisées en Java, au sein d'une librairie interne à l'équipe MAD que j'avais débutée lors d'un stage précédent (<a href="ExpProGreyc.html">voir 1er stage au greyc</a>).
+					</p>
+				</div>
+			</article>
+			<article>
+				<div class="content">
+					<h3>Manuscrit & Soutenance (non soutenus) </h3>
+					<p>La rédaction a débuté en retard suite à une volonté de terminer la troisième contribution ainsi qu'à des problèmes d'ordre personnel. Malheureusement, il n'était alors plus possible de le terminer à temps 
+					pour une soutenance en fin de troisième année.
+					Il aurait donc fallu réaliser une quatrième année non financée pour pouvoir la terminer, ce qui n'a pas été jugé intéressant, vis-à-vis de mon objectif (sortir du domaine universitaire).
+					En accord avec mon encadrant, nous avons donc décidé de terminer le contrat doctoral à sa date officielle (30 septembre 2018), de ne pas finir le manuscrit et donc de ne pas soutenir.
+					</p>
+				</div>
+			</article>
+			<article>
+				<div class="content">
+					<h3>Publications</h3>
+					<p>
+					Durant mon contrat, j'ai pu publier deux articles. Nous avions également deux autres contributions que nous aurions pu peaufiner pour réaliser deux nouveaux articles, mais nous ne l'avons pas fait par manque de temps.
+					</p>
+					<p>
+					Juillet 2016 : Article court intitulé "Intégration de recommandations simples dans un MDP" publié dans le cadre d'une conférence Francophone: "11èmes journées Francophones sur la Planification, la Décision et l’Apprentissage" (JFPDA) tenue à Grenoble.
+					Via cet article court j'ai pu présenter et avoir un retour sur nos idées générales identifiées en 1er année.
+					L'article est trouvable <a href="https://hal.archives-ouvertes.fr/hal-01356031/document">ici</a>.</p>
+					
+					<p>
+					Février 2018 : Article "An Experimental Study of Advice in Sequential Decision-Making under Uncertainty" publié dans une conférence internationale de rang A*: "32nd AAAI Conférence en intelligence artificielle" tenue à la Nouvelle-Orléans aux États-Unis.
+					Cet article a clôturé notre contribution centrale sur l'intégration de recommandations dans la résolution d'un IRMDP.
+					L'article est trouvable <a href="https://hal.archives-ouvertes.fr/hal-01646200/document">ici</a>.
+					</p>
+				</div>
+			</article>
+			<article>
+				<div class="content">
+					<h3>Retour</h3>
+					<p> Durant ces trois ans, j'ai pu acquérir de nombreuses méthodologies de recherche, sur la lecture/écriture d'ouvrages et d'articles scientifiques, sur les techniques d'analyse et de réflexion, etc. 
+					J'ai également pu rencontrer de nombreux experts de différents domaines en assistant à des conférences scientifiques, à des réunions de projet ou encore des écoles doctorales au public très variées.
+					J'ai pu voir le fonctionnement interne des Universités, le travail des chercheurs alliant les cours, leurs recherches, l'établissement de nouveaux projets et la recherche de financement pour ces derniers... </p>
+					
+					<p>
+					D'un point de vue personnel, l'enseignement réalisé par les professeurs-chercheurs des Universités françaises m'a paru beaucoup trop chronophage, certains ayant du mal à trouver du temps pour les recherches qui leur plait. Cela m'a donc confirmé m'a volonté de rejoindre le secteur privé par la suite, dans une branche R&D ou encore sur des projets de pointe nécessitant l'étude de nouveaux algorithmes.
+					Mon expérience au sein de l'Université me permettra cependant de m'intégrer facilement à des projets incluant des chercheurs universitaires ou non. </p>
+					
+					<p>
+					Il est quand même malheureux de ne pas avoir pu soutenir, mais arrivé à la fin de la troisième année il aurait fallu me réinscrire en quatrième année sans rémunération pour pouvoir terminer le manuscrit et soutenir courant 2019, ce qui était compliqué financièrement.
+					Après discussion avec mon encadrant, vis-à-vis de mon ressenti et ma volonté de quitter le secteur académique, on a jugé préférable que je ne me réinscrive pas et de terminer la thèse même sans avoir soutenu.
+					</p>
+				</div>
+			</article>
+			
+			<article>
+				<div class="content">
+					<h3>Sites en lien avec mon Doctorat :</h3>
+					<a href="https://www.greyc.fr/">Greyc</a><br>
+					<a href="https://www.greyc.fr/?page_id=439">Équipe MAD</a><br>
+					<a href="http://researchers.lille.inria.fr/~munos/papers/files/bouquinPDMIA.pdf">Livre en français sur les MDP et l'apprentissage par renforcement</a><br>
+					<a href="https://arxiv.org/ftp/arxiv/papers/1205/1205.2619.pdf">Article sur les MDP avec récompenses incertaines</a><br>
+					<a href="https://hal.archives-ouvertes.fr/hal-01646200/document">Article long publié dans la conférence internationnale AAAI.</a><br>
+					<a href="https://hal.archives-ouvertes.fr/hal-01356031/document">Article court publié en Juillet 2016 dans une conférence francophone (JFPDA).</a><br>
+				</div>
+			</article>
+	</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+					
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Accueil</a></li>
+										<li>
+											<span class="opener">Expérience Professionnelle</span>
+											<ul>
+												<li><a href="ExpProResume.html">Résumé Global</a></li>
+												<li><a href="ExpProDoctorat.html">Doctorat au Greyc (3 ans)</a></li>
+												<li><a href="ExpProEnseignement.html">Enseignement réalisés (annexe au Doctorat, 3 ans)</a></li>
+												<li><a href="ExpProGreyc2.html">Greyc (2nd stage de 6 mois)</a></li>
+												<li><a href="ExpProGreyc.html">Greyc (alternance et stage 1 an)</a></li>
+												<li><a href="ExpProHydrOcean.html">HydrOcean, Nantes (Stage de 4 mois) </a></li>
+												<li><a href="ExpProVeolia.html">Veolia Umweltservice Management Suisse SA (Stage de 4 mois) </a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Études réalisées</span>
+											<ul>
+												<li><a href="EtudeResume.html">Résumé Global</a></li>
+												<li><a href="EtudeCaen.html">Université de Caen Normandie</a></li>
+												<li><a href="EtudeEpitech.html">Epitech</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Publications</span>
+											<ul>
+												<li><a href="Publi2.html">An Experimental Study of Advice in Sequential Decision-Making under Uncertainty</a></li>
+												<li><a href="Publi1.html">Articles court : Intégration de recommandations simples dans un MDP</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Projets</span>
+											<ul>
+												<li><a href="JeuDeManipulation.html">Jeu De Manipulation</a></li>
+												<li><a href="ProjAnimate.html">Epitech : EIP Animate</a></li>
+												<li><a href="ProjPacMan.html">Stage au Greyc : Pac Man</a></li>
+												<li><a href="ProjRunForGold.html">Stage au Greyc : Run For Gold</a></li>
+											</ul>
+										</li>
+										<li><a href="CV.html">CV</a></li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Contact</h2>
+									</header>
+									<p>Actuellement en France, 
+									je cherche cependant à m'installer en Suisse</p>
+									<ul class="contact">
+										<li class="fa-envelope-o"><a href="florian.benavent@gmail.com">florian.benavent@gmail.com</a></li>
+										<li class="fa-phone">(+33) 06 88 45 81 71</li>
+										<li class="fa-home">5 Allée Robert Grignon<br />
+										33120 Arcachon</li>
+									</ul>
+								</section>
+
+						</div>
+					</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
