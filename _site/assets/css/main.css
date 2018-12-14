@@ -72,12 +72,6 @@ input, select, textarea {
 	appearance: none;
 }
 
-
-pdfreader {
-	margin-left: auto;
-	margin-right: auto;
-}
-
 /* Basic */
 
 	@-ms-viewport {
