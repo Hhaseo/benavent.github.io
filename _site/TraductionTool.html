@@ -33,27 +33,39 @@
 	<section>
 			<article>
 				<div class="content">
-					<h3> Contexte</h3>
-					<h4> Septembre 2013 - 2014</h4>
-					<p>Sous-projet du stage réalisé dans l'équipe Modèles, Agents et Décisions (MAD) au GREYC lors de ma cinquième année à Epitech. Plus de détails sur le stage <a href="ExpProGreyc.html">ici</a>.</p>
+					<h3> Qu-est ce ? </h3>
+					<p>L'objectif de cet outil est de faciliter la création de fichiers de traduction (au format xml actuellement).
+					L'outil se divise alors en 2 partie, la première développé en qt/c++ est un client sous licence GPL 0 (libre utilisation) permettant de modifier les langues utilisées, les sections, les entrées mais également de trouver rapidement les éléments à compléter.
+					La 2nd partie correspond simplement en une classe de chargement de ces fichiers xml pour vous permettre d'utiliser facilement vos traductions dans vos programmes quels qu'ils soient.
+					</p>
 					</div>
 			</article>
 			<article>
 				<div class="content">
-					<h3>Objectif</h3>
-					<p> Le sujet du stage portait sur la réalisation d'une librairie Java d'intelligence artificielle. Parmi les techniques implémentées, nous retrouvons de nombreux algorithmes de planification 
-					appartenant à la famille des Processus de Décisions Markoviens. Ces algorithmes faisant office de cours au sein de l'Université de Caen Normandie, il nous a semblé approprié de créer un petit jeu nous
-					permettant à la fois de faire nos tests et de servir d'outil de démonstration lors des différents évènements (salon de l'étudiant, fête de la science) pour montrer et expliquer à la fois les 
-					réalisations de l'équipe MAD et les cours proposés à l'Université.</p>
-					<p> Cet outil n'ayant pas été initialement prévu dans le cadre du stage, sa forme était libre. Après discussion avec mon encadrant, nous sommes tombés d'accord qu'un jeu jouable par les utilisateurs,
-					ou non, serait plus parlant lors des salons et avons donc opté pour un jeu bien connu, le Pac-Man.</p>
+					<h3>Les fichiers XML</h3>
+					<p> Ces fichiers servent de stockage pour la base de donnée de traduction. Le format xml a été utilisé pour son intégration très rapide dans les langages courrants (C++/C#/Java...). De la même manière j'envisage l'ajout du format json, pour ceux préférant ce dernier dans un avenir proche.</p>
+					<p> Tant que la syntaxe est maintenu, ces fichiers peuvent aussi bien être modifié à la main que via le client dédié (voir un peu plus bas)</p>
+					<p> Ces fichiers, réunis dans un dossier commun, se divisent par langue (1 fichier par langue). Chaque fichier s'appelera alors "langue".xml, il s'agira du champ "langue" présent dans le client (libre à vous de préciser en, fr, anglais, français, english...).</p>
+					<p> Chaque fichier sera divisé comme suit :
+					<ul>
+					<li> Une section Origin servant de base au fichier </li>
+					<li> Un ensemble de sections et sous-sections (optionnelles) </li>
+					<li> Pour chaque section/sous-sections une liste d'entrées définit par un nom, une valeur (le texte associé à cette entrée pour la langue du fichier en cours) et un statut. Ce statut est géré par le Client et la classe de chargement pour se repérer rapidement (et en prévision d'ajout de fonctionnalités).
+					Actuellement le statut correspond soit à "Valid" soit à "Empty" selon si une valeur a été associée à l'entrée ou non.</li>
+					</ul>
+					</p>
+										<p><b> Exemple de fichier vide et rempli + téléchargement</p></p>
 				</div>
 			</article>
 			<article>
 				<div class="content">
-					<h3>Technologie</h3>
-					<p> Tout comme la librairie d'intelligence artificielle, cette simulation est codée en Java. Pour ce qui est de l'interface, une librairie interne à l'équipe, développée par un précédent stagiaire, 
-					est utilisée. Cette librairie est une surcouche de swing modifié au fur et à mesure des projets.</p>
+					<h3>Le Client</h3>
+					<p> Le client est développé en C++/QT. Il à pour but de faciliter la création et le remplissage des fichiers de traductions sans nécessiter la modification au format XML.
+					
+					On peut y charger des fichiers pré-existant et modifier la base de donnée aussi bien en terme de sections que d'entrées. On peut y ajouter une nouvelle langue qui créera alors le fichier correspondant avec les entrées à vide. 
+					
+					Outre le fait de ne pas avoir à modifier directement plusieurs fichiers xml, l'intérêt de cet outil est d'utilisé un système de filtre pour atteindre facilement les éléments manquants dans votre base de données.
+					</p>
 				</div>
 			</article>
 			<article>
@@ -152,6 +164,8 @@
 										<li>
 											<span class="opener">Projets</span>
 											<ul>
+												<li><a href="JeuDeManipulation.html">Jeu de carte</a></li>
+												<li><a href="JeuDeManipulation.html">Salle d'arcade</a></li>
 												<li><a href="JeuDeManipulation.html">Jeu De Manipulation</a></li>
 												<li><a href="ProjAnimate.html">Epitech : EIP Animate</a></li>
 												<li><a href="ProjPacMan.html">Stage au Greyc : Pac Man</a></li>
