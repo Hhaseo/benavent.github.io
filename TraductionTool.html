@@ -1,0 +1,98 @@
+---
+layout: default
+title: Pac Man
+---
+
+<!-- Banner -->
+	<section id="banner">
+		<div class="content">
+			<header>
+				<h2> Gestion Multi-Langues </h2>
+				<h3> Outil de gestion de fichiers de langues en .xml. </h3>
+			</header>
+				</div>
+	</section>
+
+<!-- Section -->
+	<section>
+			<article>
+				<div class="content">
+					<h3> Qu-est ce ? </h3>
+					<p>L'objectif de cet outil est de faciliter la création de fichiers de traduction (au format xml actuellement).
+					L'outil se divise alors en 2 partie, la première développé en qt/c++ est un client sous licence GPL 0 (libre utilisation) permettant de modifier les langues utilisées, les sections, les entrées mais également de trouver rapidement les éléments à compléter.
+					La 2nd partie correspond simplement en une classe de chargement de ces fichiers xml pour vous permettre d'utiliser facilement vos traductions dans vos programmes quels qu'ils soient.
+					</p>
+					</div>
+			</article>
+			<article>
+				<div class="content">
+					<h3>Les fichiers XML</h3>
+					<p> Ces fichiers servent de stockage pour la base de donnée de traduction. Le format xml a été utilisé pour son intégration très rapide dans les langages courrants (C++/C#/Java...). De la même manière j'envisage l'ajout du format json, pour ceux préférant ce dernier dans un avenir proche.</p>
+					<p> Tant que la syntaxe est maintenu, ces fichiers peuvent aussi bien être modifié à la main que via le client dédié (voir un peu plus bas)</p>
+					<p> Ces fichiers, réunis dans un dossier commun, se divisent par langue (1 fichier par langue). Chaque fichier s'appelera alors "langue".xml, il s'agira du champ "langue" présent dans le client (libre à vous de préciser en, fr, anglais, français, english...).</p>
+					<p> Chaque fichier sera divisé comme suit :
+					<ul>
+					<li> Une section Origin servant de base au fichier </li>
+					<li> Un ensemble de sections et sous-sections (optionnelles) </li>
+					<li> Pour chaque section/sous-sections une liste d'entrées définit par un nom, une valeur (le texte associé à cette entrée pour la langue du fichier en cours) et un statut. Ce statut est géré par le Client et la classe de chargement pour se repérer rapidement (et en prévision d'ajout de fonctionnalités).
+					Actuellement le statut correspond soit à "Valid" soit à "Empty" selon si une valeur a été associée à l'entrée ou non.</li>
+					</ul>
+					</p>
+										<p><b> Exemple de fichier vide et rempli + téléchargement</p></p>
+				</div>
+			</article>
+			<article>
+				<div class="content">
+					<h3>Le Client</h3>
+					<p> Le client est développé en C++/QT. Il à pour but de faciliter la création et le remplissage des fichiers de traductions sans nécessiter la modification au format XML.
+					
+					On peut y charger des fichiers pré-existant et modifier la base de donnée aussi bien en terme de sections que d'entrées. On peut y ajouter une nouvelle langue qui créera alors le fichier correspondant avec les entrées à vide. 
+					
+					Outre le fait de ne pas avoir à modifier directement plusieurs fichiers xml, l'intérêt de cet outil est d'utilisé un système de filtre pour atteindre facilement les éléments manquants dans votre base de données.
+					</p>
+				</div>
+			</article>
+			<article>
+				<div class="content">
+					<h3>Réalisation</h3>		
+				
+						<section id="banner">
+							<div class="content">
+								<header>
+									<p>Configuration de la partie</p>
+								</header>
+								<p> Les quatre fantômes tout comme les Pac-Man peuvent être gérés par des I.A. fournies par la librairie sur laquelle on travaillait ou par des joueurs, selon les besoins.
+								On a ajouté l'option de pouvoir utiliser un 2nd PacMan (avec des touches différentes du clavier, ou une autre I.A.).</p>
+					<p>Les I.A. pouvant être utilisées sont de trois types :
+					<ul>
+					<li> I.A. du jeu original : Aléatoire et Chaser (l'I.A. poursuit le joueur quand elle le voit) </li>
+					<li> Processus de Décisions Markoviens : Value Iteration et Policy Iteration </li>
+					<li> Apprentissage par renforcement : QLearning, Sarsa, Rmax et des variantes </li>
+					</ul>
+					Pour permettre une planification plus rapide et surtout donner plus de chances aux joueurs, les I.A. proposent divers adapteurs réduisant leur visibilité (sans adaptateur, l'I.A. prend certe plus de temps
+					à calculer son itinéraire, mais poursuivra le joueur en prenant toujours le chemin optimal et en tenant compte de ses alliés, rendant le jeu impossible).
+					</p>
+							</div>
+							
+							<span class="image object">
+								<img src="https://florianbenavent.net/Images/PacManConfiguration.png" alt="" style="width:100%;height:100%;" />
+							</span>
+						</section>
+						<section id="banner">
+							<div class="content">
+								<header>
+									<p>Affichage de la partie</p>
+								</header>
+								<p> L'implémentation de l'interface est assez basique. La carte étant représentée par une simple grille, comme dans le jeu original elle reste inchangée tout au long de la partie.
+								La carte est composée de petits points à manger et de 4 gros points permettant au Pac-Man de dévorer les fantômes.
+								Lorsque tous les points sont mangés, la carte se réinitialise et le joueur peut continuer ainsi jusqu'à l'épuisement de ses vies. </p>
+					<p>			Un compteur de point et de vie est indiqué sur le côté de l'interface (non visible sur la capture d'écran disponible), le score final apparaissant quand le joueur a perdu toutes ses vies.
+					</p>
+							</div>
+							<span class="image object">
+								<img src="https://florianbenavent.net/Images/PacMan.png" alt="" style="width:100%;height:100%;" />
+							</span>
+						</section>	
+				</div>
+			</article>
+	</section>
