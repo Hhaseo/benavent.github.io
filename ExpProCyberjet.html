@@ -1,0 +1,107 @@
+---
+layout: default
+title: Cyberjet
+---
+
+
+<!-- Banner -->
+	<section id="banner">
+		<div class="content">
+			<header>
+				<h1> Responsable équipe informatique </h1>
+			</header>
+		</div>
+	</section>
+
+<!-- Section -->
+	<section>
+			<article>
+				<div class="content">
+					
+					<p><h3>Date :</h3> Septembre 2019 à décembre 2022.</p>
+				</div>
+			</article>
+			<article>
+				<div class="content">
+					<h3>Entreprise : Cyberjet</h3>
+					<p> 
+						Cyberjet est une entreprise spécialisée dans les systèmes d'informations pour le transport aérien.
+						La société propose différentes suites logiciels aux compagnies aériennes pour gérer à la fois les communications air-sol ou sol-sol, pour gérer son personnel (aussi bien en terme de formation, de congés, paies...) et la gestion des plannings vols & équipages dans le respect des contraintes liées à l'aérien.
+						
+						Actuellement basée au Teich, 33470 France.
+						Vous pouvez retrouver davantage d'information sur <a href="https://www.cyberjet.fr/"> le site web de l'entreprise </a>
+					</p>
+				</div>
+			</article>
+			<article>
+				<div class="content">
+					<h3>Reprise du projet Plannification Automatique</h3>
+					<p>Projet débuté quelques années avant mon arrivée, ce projet est centré sur une boite noire permettant d'assigner, pour un ensemble de vols, les équipages requis pour leur réalisation (des pilotes, des membres de cabines) en fonction de leurs qualifications, postes et des besoins du vol.
+					La boite noire était à l'origine codé en C++ avec une forte inspiration du C.
+					Une interface permettait de charger les données de sa période et d'évaluer les résultats de la boite noire avant de la valider. Cette dernière est faite en Windev.
+					</p>
+					<p>Dans ce projet mon intervention a été principalement centrée sur la boite noire. Dans un premier temps convertir cette boite noire en C# et la refactorer pour s'harmoniser avec d'autres projets.
+					Pour régler des problèmes de consommation mémoire et de temps de calculs j'ai également du revoir la façon dont était modélisée les différents plannings sur lesquels on travaillait.
+					Enfin seul quelque règles de réglementation aérienne était présente, le but était d'intégrer un moteur réglementaire complet s'adaptant à chaque client (projet suivant).
+					</p>
+				</div>
+			</article>
+			<article>
+				<div class="content">
+					<h3>Moteur réglementaire</h3>
+					<p>Jusqu'à maintenant la réglementation était une boite noire dans laquelle l'utilisateur avait très peu de marge de manoeuvre.
+						Sous l'influence des demandes des autorités régissant l'aérien (DGAC pour la France par exemple), notre système devait permettre de visualiser davantage d'information sur comment le système est configuré.
+						Les utilisateurs également demandent d'avoir une plus grande marge de manoeuvre sur cette configuration, dans le but d'être moins dépendant de notre entreprise en cas de changement.					
+					</p>
+					<p>L'outil existant, codé en Windev, arrivant à bout de course il devenait compliqué d'assurer sa maintenance et nécessitait d'être modifié en profondeur pour pouvoir s'appliquer aux demandes précédemment cités.
+					</p>
+					<p>La direction choisi a été de repartir de 0, par la création d'une Web Api réglementaire en C#, accompagné de son interface en React/Redux/Typescript.
+					Il s'agit dans sa réalisation d'un moteur de règle générique, un certain nombre de règles représentant l'accès aux données de notre application, l'utilisateur peut alors choisir d'appliquer ces différentes contraintes et de renseigner de nombreuses valeurs (numériques, date et heure, type d'activités...).
+					Des abstractions permettent de rendre plus accessible cette configuration au plus grand nombre.
+					En terme d'interface aucune décision officielle a été prise sur la direction à prendre, elle reste donc, à l'heure de mon départ, dédiée à une utilisation par le personnel de la société.				
+					</p>
+				</div>
+			</article>
+			<article>
+				<div class="content">
+					<h3>Maintenance et évolution de l'existant</h3>
+					<p>Vis-à-vis des suites logicielles existantes dans l'entreprise, mon travail a porté sur la suite logicielle de gestion vol et équipages créé en Windev (pour des applications bureau) et Webdev (pour des applications Web).</p>
+					<p>En terme de maintenance, mon travail s'orientait sur la correction de bug remonté par les utilisateurs et parfois l'analyse et l'optimisation de certaines fonctionnalités.
+					</p>
+					<p>En terme d'évolution dans ces suites logicielles, outre de petites retouches ici et là mon travail c'est centré sur la création de 2 API, une API de gestion documentaire et une API d'export ICS, en C# pour les 2.
+					<ul>
+						<li>	
+							L'API Documentaire avait pour but d'offrir la possibilité de sauvegarder les fichiers en base de données plutôt qu'en fichier local. Elle inclut bien évidemment un système de chiffrement pour les documents sensibles.
+							L'API devait permettre également par la suite de proposer des sauvegardes de fichier différente (cloud, FTP...) et pouvoir intégrer un système d'archivage/suppression automatique. 
+						</li>
+						<li> 
+						L'API d'export ICS est une interface pour la synchronisation des plannings des utilisateurs avec des calendriers tiers (google agenda, iphone ...) au format standard ICS.
+						</li>
+					</ul>
+					</p>
+				</div>
+			</article>
+			<article>
+				<div class="content">
+					<h3>Conclusion</h3>
+					<h5>Personnel</h5>
+					<p> Cette entreprise m'a permis de découvrir un domaine très intéressant, en me centrant sur la partie réglementation qui m'a plu. 
+					D'un point de vue technique en plus de me permettre de me perfectionner en C# (en suivant les évolutions .Net5 et .Net6_, elle m'a permis de découvrir et me former en React/Redux/Typescript.
+					L'ambiance très agréable le travail collaboratif et les échanges avec les clients ou les sociétés tiers dans l'aérien toujours instructifs.
+					
+					</p>
+					<p>
+					La transition technologique tardant à se mettre complètement en place et pour des raisons d'ordre organisationnel, j'ai démissionné au bout de 3 ans pour me permettre de m'orienter vers d'autres expériences professionnelles.
+					</p>
+				</div>
+			</article>
+			
+			<article>
+				<div class="content">
+					<h3>Sites en lien avec mon stage :</h3>
+					<a href="https://marine-offshore.bureauveritas.com/bvsolutions">Bureau Veritas</a><br>
+					
+					<a href="https://www.ec-nantes.fr/l-ecole/partenaires-et-reseaux/partenaires-industriels/hydrocean-une-entreprise-innovante-dans-le-domaine-maritime-153675.kjsp">HydrOcean au sein de l'école Centrale de Nantes</a><br>
+				</div>
+			</article>
+	</section>
